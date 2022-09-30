@@ -4,58 +4,72 @@
     <title>cat_or_page</title>
     <style>
         body {
-            background-color: black;
-            display: flex;
-        }
-
-        .div1 {
-            background-color: red;
-            width: 200px;
-            height: 200px;
-            font-size: 24px;
-            font-family: 'Lobster';
-            font-weight: bold;
-        }
-
-        .div2 {
-            background-color: black;
-            color: red;
-            width: 200px;
-            height: 200px;
-            font-size: 24px;
-            font-family: 'Lobster';
-            font-weight: bold;
-            transition: all 1s ease-in-out, all 1s ease-in-out;
-        }
-
-        .div2:hover {
-            background-color: red;
-            color: black;
-            width: 100%;
-        }
-
-        .present {
-            align-content: center;
-            color: lightcyan;
-            display: block;
-            font-family: "Source Code Pro";
+            background-color: darkviolet;
+            background-image: linear-gradient( darkslategrey, darkviolet );
+            background-repeat: no-repeat;
+            background-size: contain;
             text-align: center;
+        }
+        section {
+            padding: 100px 100px 0px 0px;
+            text-align: center;
+            color: lightcyan;
+            font-family: "Source Code Pro";
+            font-size: 20px;
+        }
+
+        .present_pfp {
+            align-content: center;
+            animation: grow_text 2s linear;
+            height: 200px;
+        }
+
+        .cursor {
+            animation: blink 3s infinite;
+        }
+
+        .paragraph {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes blink {
+            from { filter: opacity(0%); }
+            50% { filter: opacity(100%); }
+            to { filter: opacity(0%); }
+        }
+
+        @keyframes grow_text {
+            from { font-size: 1px; }
+            to { font-size: 20px; }
         }
 
         #pfp {
             width: 100px;
+            border-radius: 100%;
         }
+
     </style>
 </head>
 
 <body>
-    <div class="present">
-        HI I am cat_or_not
-        
-        </br>
-        
-        <img id="pfp" src="https://avatars.githubusercontent.com/u/41955154?v=4"></img>
-    </div>
+    <section>
+        <div class="present_pfp">
+            HI I am cat_or_not
+            
+            </br>
+            
+            <img id="pfp" src="https://avatars.githubusercontent.com/u/41955154?v=4"></img>
+        </div>
+    </section>
+    
+    <section>
+        <div class="paragraph">
+            I love programming ...<span class="cursor">|</span>
+            </br>
+            and cats
+        </div>
+    </section>
         
     <link href="https://fonts.googleapis.com/css2?family=Source Code Pro&display=swap" rel="stylesheet">
 </body>
