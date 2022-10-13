@@ -4,14 +4,16 @@
     <title>cat_or_page</title>
     <style>
         body {
-            background-color: darkviolet;
-            background-image: linear-gradient( darkslategrey, darkviolet );
+            background-color: #322E46;
+            background-image: linear-gradient(#15141B, #15141A);
             background-repeat: no-repeat;
             background-size: contain;
             text-align: center;
         }
+
         section {
-            padding: 100px 100px 0px 0px;
+            padding-bottom: 100px;
+            padding-top: 100px;
             text-align: center;
             color: lightcyan;
             font-family: "Source Code Pro";
@@ -34,14 +36,27 @@
         }
 
         @keyframes blink {
-            from { filter: opacity(0%); }
-            50% { filter: opacity(100%); }
-            to { filter: opacity(0%); }
+            from {
+                filter: opacity(0%);
+            }
+
+            50% {
+                filter: opacity(100%);
+            }
+
+            to {
+                filter: opacity(0%);
+            }
         }
 
         @keyframes grow_text {
-            from { font-size: 1px; }
-            to { font-size: 20px; }
+            from {
+                font-size: 1px;
+            }
+
+            to {
+                font-size: 20px;
+            }
         }
 
         #pfp {
@@ -49,20 +64,52 @@
             border-radius: 100%;
         }
 
+        #right_display {
+            display: block;
+            float: right;
+            position: absolute;
+            /* transform: translateX( 5em ); */
+            z-index: -1;
+        }
+
+        #left_display {
+            display: block;
+            float: left;
+            position: absolute;
+            transform: scaleX(-1);
+            z-index: -1;
+        }
+
+        #right_puppycat {
+            margin-left: 55em;
+        }
+
+        #left_puppycat {
+            margin-right: 25em;
+        }
     </style>
 </head>
 
 <body>
+
+    <div id="right_display">
+        <img id="right_puppycat" src="images/puppycat.gif">
+    </div>
+    <div id="left_display">
+        <img id="left_puppycat" src="images/puppycat.gif">
+    </div>
+
+
     <section>
         <div class="present_pfp">
             HI I am cat_or_not
-            
+
             </br>
-            
-            <img id="pfp" src="https://avatars.githubusercontent.com/u/41955154?v=4"></img>
+
+            <img id="pfp" src="https://avatars.githubusercontent.com/u/41955154?v=4">
         </div>
     </section>
-    
+
     <section>
         <div class="paragraph">
             I love programming ...<span class="cursor">|</span>
@@ -73,6 +120,6 @@
             <a href="cats">Click for cat</a>
         </div>
     </section>
-        
+
     <link href="https://fonts.googleapis.com/css2?family=Source Code Pro&display=swap" rel="stylesheet">
 </body>
