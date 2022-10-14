@@ -34,6 +34,17 @@
             margin-right: auto;
         }
 
+        .puppycat_disaplay {
+            align-self: center;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 50px;
+        }
+
+        .flip {
+            transform: scaleX(-1);
+        }
+
         @keyframes blink {
             from {
                 filter: opacity(0%);
@@ -63,50 +74,35 @@
             border-radius: 100%;
         }
 
-        #right_display {
-            display: block;
-            float: right;
-            position: absolute;
-            /* transform: translateX( 5em ); */
-            z-index: -1;
+        #puppycat-left {
+            margin-right: 10em;
         }
 
-        #left_display {
-            display: block;
-            float: left;
-            position: absolute;
-            transform: scaleX(-1);
-            z-index: -1;
+        #puppycat-right {
+            margin-left: 10em;
         }
-
-        #right_puppycat {
-            margin-left: 55em;
-        }
-
-        #left_puppycat {
-            margin-right: 25em;
-        }
+        
     </style>
 </head>
 
 <body>
 
-    <div id="right_display">
-        <img id="right_puppycat" src="images/puppycat.gif">
+    <div id="puppycat_display">
+        <img id="puppycat-left" class="flip" src="images/puppycat.gif">
+        <img id="puppycat-right" src="images/puppycat.gif">
     </div>
-    <div id="left_display">
-        <img id="left_puppycat" src="images/puppycat.gif">
-    </div>
-
 
     <section>
-        <div class="present_pfp">
+        <!--         <div class="present_pfp">
             HI I am cat_or_not
 
             </br>
 
             <img id="pfp" src="https://avatars.githubusercontent.com/u/41955154?v=4">
-        </div>
+        </div> -->
+
+        <img src="catornot_cube_v2.gif">
+
     </section>
 
     <section>
