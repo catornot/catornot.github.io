@@ -1,96 +1,61 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <title>cat_or_page</title>
-    <style>
-        body {
-            background-color: #15141B;
-            background-repeat: no-repeat;
-            background-size: contain;
-            text-align: center;
-        }
-
-        section {
-            padding-bottom: 100px;
-            padding-top: 100px;
-            text-align: center;
-            color: lightcyan;
-            font-family: "Source Code Pro";
-            font-size: 20px;
-        }
-
-        .cursor {
-            animation: blink 3s infinite;
-        }
-
-        .paragraph {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .puppycat_disaplay {
-            align-self: center;
-            display: grid;
-            grid-template-columns: auto auto;
-            column-gap: 50px;
-        }
-
-        .flip {
-            transform: scaleX(-1);
-        }
-
-        @keyframes blink {
-            from {
-                filter: opacity(0%);
-            }
-
-            50% {
-                filter: opacity(100%);
-            }
-
-            to {
-                filter: opacity(0%);
-            }
-        }
-
-        #puppycat-left {
-            margin-right: 10em;
-        }
-
-        #puppycat-right {
-            margin-left: 10em;
-        }
-
-        #circle_img {
-            border-radius: 100%;
-        }
-        
-    </style>
+  <title>cat_or_page</title>
+  <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
+  <div>
+    <img id="puppycat-left" class="flip" src="ximages/puppycat.gif">
+    <img id="puppycat-right" src="ximages/puppycat.gif">
+  </div>
 
-    <div id="puppycat_display">
-        <img id="puppycat-left" class="flip" src="images/puppycat.gif">
-        <img id="puppycat-right" src="images/puppycat.gif">
+  <section>
+    <img class="circle_img" src="ximages/catornot_cube_v2.gif">
+  </section>
+
+  <section>
+    <div class="paragraph">
+      I love programming ...<span class="cursor">|</span>
+      </br>
+      and cats
+
+      </br></br></br>
+      <a href="cats">Click for cat</a>
     </div>
+  </section>
 
-    <section>
+  <section>
+    <h2>Projects</h2>
 
-        <img id="circle_img" src="images/catornot_cube_v2.gif">
-
-    </section>
-
-    <section>
-        <div class="paragraph">
-            I love programming ...<span class="cursor">|</span>
-            </br>
-            and cats
-
-            </br></br></br>
-            <a href="cats">Click for cat</a>
+    <a class="no-link" href="https://github.com/R2NorthstarTools/rrplug">
+      <div class="project">
+        <div>
+          <img class="thumbnail circle_img" src="https://avatars.githubusercontent.com/u/118133395?s=48&v=4">
+          <h3>rrplug</h3>
+          2023 - now
         </div>
-    </section>
+        </br>
 
-    <link href="https://fonts.googleapis.com/css2?family=Source Code Pro&display=swap" rel="stylesheet">
+        <div class="smalltext">
+          rrplug is a rust crate that provides a wrapper with clever abstractions around the
+          <a href="https://northstar.tf/">northstar plugin system</a>
+
+          </br></br>
+
+          It is build to provide a safe api using macros and traits.
+        </div>
+      </div>
+    </a>
+
+    <div class="project">
+      <img class="thumbnail circle_img" src="https://avatars.githubusercontent.com/u/41955154?v=4">
+    </div>
+  </section>
+
+  <link href="https://fonts.googleapis.com/css2?family=Source Code Pro&display=swap" rel="stylesheet">
 </body>
+
+</html>
