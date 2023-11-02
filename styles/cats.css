@@ -1,0 +1,15 @@
+img {
+  padding-top: 100px;
+  padding-right: 50px;
+  height: 300px;
+  display: inline-block;
+  text-align: center;
+}
+
+#back_button {
+  height: 50px;
+}
+
+back_button:hover {
+  box-shadow: 60px -16px white;
+}
